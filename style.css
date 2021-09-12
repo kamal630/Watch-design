@@ -1,0 +1,79 @@
+.container {
+    max-width: 1300px;
+}
+.watch {
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    
+    
+    height: 800px;
+    text-align: center;
+}
+.watch .circle {
+    width: 280px;
+    height: 280px;
+    background: rgb(255, 255, 255);
+    margin: 200px auto auto;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.22) 2px 7px 20px 8px;
+    position: relative;
+}
+.main_watch {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.44) 2px 5px 20px 0px inset;
+    border: 13px solid rgb(222, 225, 227);
+    background-image: url("clock.png");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main_watch::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    background: rgb(132, 131, 133);
+    height: 18px;
+    border-radius: 50%;
+    z-index: 10;
+    border: 3px solid white;
+}
+.main_watch::after {
+    content: "";
+    width: 2px;
+    height: 132px;
+    background: tomato;
+    position: absolute;
+    top: 35%;
+    border-radius: 6px;
+    transform: rotate(225deg);
+    display: block;
+    left: 39%;
+}
+.circle::before,
+.circle::after {
+    content: "";
+    position: absolute;
+}
+.circle::after {
+    width: 7px;
+    height: 72px;
+    background: rgb(132, 131, 133);
+    top: 22%;
+    left: 49%;
+    border-radius: 5px;
+}
+.circle::before {
+    width: 4px;
+    height: 101px;
+    background-color: #998c9980;
+    top: 32%;
+    left: 60%;
+    transform: rotate(90deg);
+    border-radius: 5px;
+}
